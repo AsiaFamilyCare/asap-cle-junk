@@ -1214,3 +1214,49 @@ footer p {
         font-size: 31px;
     }
 }
+/* MOCKUP PHOTOS - KEEP GALLERY PHOTOS SEPARATE */
+
+.hero-visual {
+  background: url("mockup-hero-truck.jpg") center center / cover no-repeat !important;
+}
+
+.hero-visual .city-label,
+.hero-visual .truck {
+  display: none !important;
+}
+
+.service-art {
+  background-position: center !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+}
+
+.service-art.furniture {
+  background-image: url("service-furniture.jpg") !important;
+}
+
+.service-art.appliance {
+  background-image: url("service-appliance.jpg") !important;
+}
+
+.service-art.household {
+  background-image: url("service-household.jpg") !important;
+}
+
+.service-art.debris {
+  background-image: url("service-construction.jpg") !important;
+}
+
+.service-art.yard {
+  background-image: url("service-yard.jpg") !important;
+}
+
+.service-art.cleanout {
+  background-image: url("service-cleanouts.jpg") !important;
+}
+
+@media (max-width: 900px) {
+  .hero-visual {
+    background: url("mockup-hero-truck.jpg") center center / cover no-repeat !important;
+  }
+}
