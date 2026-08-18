@@ -1372,3 +1372,32 @@ footer p {
     min-width: 205px;
   }
 }
+@media (min-width: 901px) {
+
+  .hero-copy {
+    width: 60% !important;
+    max-width: 700px !important;
+    padding-left: 3.5% !important;
+    z-index: 10 !important;
+  }
+
+  .hero h1 {
+    width: 650px !important;
+    max-width: none !important;
+    font-size: 72px !important;
+    line-height: .92 !important;
+    position: relative;
+    z-index: 20;
+  }
+
+  .hero-copy > p:not(.eyebrow) {
+    width: 500px !important;
+    max-width: none !important;
+  }
+
+  .hero-points,
+  .hero-actions {
+    position: relative;
+    z-index: 20;
+  }
+}
