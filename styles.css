@@ -1015,7 +1015,7 @@ footer p {
         min-height: 235px;
         background:
             linear-gradient(0deg, rgba(0,0,0,.36), rgba(0,0,0,.03)),
-            url("asap-truck.jpg.jpg") center center / cover no-repeat;
+            url("asap-truck.png") center center / cover no-repeat;
     }
 
     .hero-visual .city-label,
