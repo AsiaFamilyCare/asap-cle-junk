@@ -1254,7 +1254,7 @@ footer p {
 }
 
 .service-art.cleanout {
-  background-image: url("service-cleanouts.jpg") !important;
+  background-image: url("service-cleanout.jpg") !important;
 }
 
 @media (max-width: 900px) {
