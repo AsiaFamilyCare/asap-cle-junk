@@ -1322,3 +1322,53 @@ footer p {
     height: 135px;
   }
 }
+@media (min-width: 901px) {
+
+  .hero .eyebrow {
+    font-size: 15px;
+    font-weight: 800;
+    letter-spacing: .4px;
+    margin-bottom: 12px;
+  }
+
+  .hero h1 {
+    font-size: 72px;
+    line-height: .93;
+    letter-spacing: -1px;
+    max-width: 560px;
+    margin-bottom: 18px;
+  }
+
+  .hero h1 .accent,
+  .hero h1 span {
+    display: block;
+  }
+
+  .hero-copy > p:not(.eyebrow) {
+    max-width: 475px;
+    font-size: 17px;
+    line-height: 1.45;
+    margin-top: 0;
+  }
+
+  .hero-points {
+    display: flex;
+    gap: 26px;
+    align-items: center;
+    margin-top: 22px;
+    margin-bottom: 24px;
+  }
+
+  .hero-point {
+    min-width: 120px;
+  }
+
+  .hero-actions {
+    display: flex;
+    gap: 14px;
+  }
+
+  .hero-actions .btn {
+    min-width: 205px;
+  }
+}
