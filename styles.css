@@ -793,7 +793,7 @@ footer p {
         background:
             linear-gradient(90deg, rgba(5,5,5,.9) 0%, rgba(5,5,5,.28) 24%, rgba(5,5,5,.05) 55%),
             linear-gradient(0deg, rgba(0,0,0,.35), rgba(0,0,0,.05)),
-            url("asap-truck.jpg.jpg") center center / cover no-repeat;
+            url("asap-truck.png") center center / cover no-repeat;
     }
 
     .hero-visual .city-label,
@@ -1217,7 +1217,7 @@ footer p {
 /* MOCKUP PHOTOS - KEEP GALLERY PHOTOS SEPARATE */
 
 .hero-visual {
-  background: url("mockup-hero-truck.jpg") center center / cover no-repeat !important;
+  background: url("mockup-hero-truck.png") center center / cover no-repeat !important;
 }
 
 .hero-visual .city-label,
@@ -1257,6 +1257,6 @@ footer p {
 
 @media (max-width: 900px) {
   .hero-visual {
-    background: url("mockup-hero-truck.jpg") center center / cover no-repeat !important;
+    background: url("mockup-hero-truck.png") center center / cover no-repeat !important;
   }
 }
