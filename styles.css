@@ -1218,6 +1218,8 @@ footer p {
 
 .hero-visual {
   background: url("mockup-hero-truck.png") center center / cover no-repeat !important;
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 18%, black 100%);
+  mask-image: linear-gradient(to right, transparent 0%, black 18%, black 100%);
 }
 
 .hero-visual .city-label,
