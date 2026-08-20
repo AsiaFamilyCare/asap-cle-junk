@@ -1396,3 +1396,38 @@ footer p {
     height: 135px !important;
   }
 }
+/* DESKTOP HERO WORDING FIX ONLY */
+@media (min-width: 901px) {
+
+  .hero-copy {
+    width: 60% !important;
+    max-width: 760px !important;
+    position: relative !important;
+    z-index: 20 !important;
+  }
+
+  .hero h1 {
+    width: 760px !important;
+    max-width: none !important;
+    font-size: 72px !important;
+    line-height: .93 !important;
+    letter-spacing: -1px !important;
+    white-space: nowrap !important;
+  }
+
+  .hero h1 span {
+    display: block !important;
+    white-space: nowrap !important;
+  }
+
+  .hero .lead {
+    width: 520px !important;
+    max-width: none !important;
+  }
+
+  .hero-points,
+  .hero-actions {
+    position: relative !important;
+    z-index: 21 !important;
+  }
+}
