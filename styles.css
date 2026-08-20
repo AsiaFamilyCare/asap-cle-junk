@@ -1431,3 +1431,23 @@ footer p {
     z-index: 21 !important;
   }
 }
+/* MATCH MOCKUP HEADLINE WIDTH */
+@media (min-width: 901px) {
+
+  .hero h1 {
+    display: inline-block !important;
+    width: auto !important;
+    max-width: none !important;
+    font-size: 68px !important;
+    line-height: .94 !important;
+    letter-spacing: .5px !important;
+    transform: scaleX(1.18);
+    transform-origin: left center;
+    white-space: nowrap !important;
+  }
+
+  .hero h1 span {
+    display: block !important;
+    white-space: nowrap !important;
+  }
+}
