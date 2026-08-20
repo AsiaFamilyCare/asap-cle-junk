@@ -1257,147 +1257,142 @@ footer p {
   background-image: url("service-cleanout.jpg") !important;
 }
 
-@media (max-width: 900px) {
-  .hero-visual {
-    background: url("mockup-hero-truck.png") center center / cover no-repeat !important;
-  }
-}
+/* =========================================================
+   FINAL DESKTOP HERO - MATCH MOCKUP
+   ========================================================= */
+
 @media (min-width: 901px) {
 
   .hero {
     position: relative;
-    display: block;
-    min-height: 425px;
+    display: block !important;
+    min-height: 540px !important;
     overflow: hidden;
-    background: #050505;
+    background: #050505 !important;
   }
 
+  /* LEFT SIDE WORDING */
   .hero-copy {
     position: relative;
-    z-index: 3;
-    width: 48%;
-    min-height: 425px;
-    padding: 35px 3.5% 30px;
-    background: transparent;
-  }
+    z-index: 10 !important;
+    width: 50% !important;
+    max-width: 650px !important;
+    min-height: 540px;
+    padding: 42px 0 35px 3.5% !important;
 
-  .hero-visual {
-    position: absolute;
-    inset: 0 0 0 38%;
-    min-height: 425px;
-    background:
-      linear-gradient(
-        90deg,
-        #050505 0%,
-        rgba(5,5,5,.92) 10%,
-        rgba(5,5,5,.48) 24%,
-        rgba(5,5,5,.08) 45%,
-        rgba(5,5,5,.04) 100%
-      ),
-      linear-gradient(
-        0deg,
-        rgba(0,0,0,.28),
-        rgba(0,0,0,.08)
-      ),
-      url("mockup-hero-truck.png") center center / cover no-repeat !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
-    -webkit-mask-image: none;
-    mask-image: none;
+    background: transparent !important;
   }
-
-  .hero h1 {
-    font-size: 68px;
-    line-height: .98;
-  }
-
-  .hero-points {
-    margin: 22px 0;
-  }
-
-  .services {
-    padding-top: 18px;
-  }
-
-  .service-art {
-    height: 135px;
-  }
-}
-@media (min-width: 901px) {
 
   .hero .eyebrow {
-    font-size: 15px;
-    font-weight: 800;
-    letter-spacing: .4px;
-    margin-bottom: 12px;
-  }
-
-  .hero h1 {
-    font-size: 72px;
-    line-height: .93;
-    letter-spacing: -1px;
-    max-width: 560px;
-    margin-bottom: 18px;
-  }
-
-  .hero h1 .accent,
-  .hero h1 span {
-    display: block;
-  }
-
-  .hero-copy > p:not(.eyebrow) {
-    max-width: 475px;
-    font-size: 17px;
-    line-height: 1.45;
-    margin-top: 0;
-  }
-
-  .hero-points {
-    display: flex;
-    gap: 26px;
-    align-items: center;
-    margin-top: 22px;
-    margin-bottom: 24px;
-  }
-
-  .hero-point {
-    min-width: 120px;
-  }
-
-  .hero-actions {
-    display: flex;
-    gap: 14px;
-  }
-
-  .hero-actions .btn {
-    min-width: 205px;
-  }
-}
-@media (min-width: 901px) {
-
-  .hero-copy {
-    width: 60% !important;
-    max-width: 700px !important;
-    padding-left: 3.5% !important;
-    z-index: 10 !important;
+    font-size: 15px !important;
+    font-weight: 900;
+    letter-spacing: .3px;
+    margin: 0 0 14px;
+    position: relative;
+    z-index: 20;
   }
 
   .hero h1 {
     width: 650px !important;
     max-width: none !important;
+    margin: 0 0 20px !important;
+
     font-size: 72px !important;
-    line-height: .92 !important;
+    line-height: .93 !important;
+    letter-spacing: -1px;
+
     position: relative;
     z-index: 20;
   }
 
-  .hero-copy > p:not(.eyebrow) {
+  .hero h1 span {
+    display: block;
+    color: var(--red);
+  }
+
+  .hero .lead {
     width: 500px !important;
     max-width: none !important;
-  }
+    margin: 0;
 
-  .hero-points,
-  .hero-actions {
+    font-size: 16px !important;
+    line-height: 1.5;
+
     position: relative;
     z-index: 20;
+  }
+
+  .hero-points {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    margin: 24px 0 !important;
+
+    position: relative;
+    z-index: 20;
+  }
+
+  .hero-actions {
+    display: flex;
+    gap: 14px;
+
+    position: relative;
+    z-index: 20;
+  }
+
+  .hero-actions .btn {
+    min-width: 205px;
+    text-align: center;
+  }
+
+  /* TRUCK IMAGE ACROSS RIGHT SIDE */
+  .hero-visual {
+    position: absolute !important;
+    z-index: 1;
+
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 37%;
+
+    min-height: 540px !important;
+
+    background:
+      linear-gradient(
+        90deg,
+        #050505 0%,
+        rgba(5,5,5,.98) 5%,
+        rgba(5,5,5,.85) 14%,
+        rgba(5,5,5,.48) 25%,
+        rgba(5,5,5,.15) 38%,
+        rgba(5,5,5,0) 52%
+      ),
+      linear-gradient(
+        0deg,
+        rgba(0,0,0,.20),
+        rgba(0,0,0,.05)
+      ),
+      url("mockup-hero-truck.png") center center / cover no-repeat !important;
+
+    -webkit-mask-image: none !important;
+    mask-image: none !important;
+  }
+
+  .hero-visual .city-label,
+  .hero-visual .truck {
+    display: none !important;
+  }
+
+  /* SERVICES CLOSER TO MOCKUP */
+  .services {
+    padding-top: 18px !important;
+  }
+
+  .service-art {
+    height: 135px !important;
   }
 }
