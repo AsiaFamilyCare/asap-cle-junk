@@ -1,1 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <title>Request a Free Quote | ASAP</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --red:#e2201a;
+      --black:#050505;
+      --white:#f6f6f6;
+    }
+
+    * {
+      box-sizing:border-box;
+    }
+
+    body {
+      margin:0;
+      background:#050505;
+      color:#f6f6f6;
+      font-family:Inter,Arial,sans-serif;
+    }
+
+    a {
+      color:inherit;
+      text-decoration:none;
+    }
+
+    .quote-header {
+      min-height:86px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:20px;
+      padding:10px 4%;
+      border-bottom:1px solid #222;
+      background:#050505;
+    }
+
+    .quote-header img {
+      width:210px;
+      max-width:42vw;
+      height:65px;
+      object-fit:contain;
+      object-position:left center;
+    }
+
+    .back-home {
+      border:1px solid var(--red);
+      padding:13px 20px;
+      border-radius:5px;
+      text-transform:uppercase;
+      font-weight:900;
+      font-size:13px;
+    }
+
+    .quote-hero {
+      text-align:center;
+      padding:55px 5% 25px;
+    }
+
+    .eyebrow {
+      color:var(--red);
+      font-weight:900;
+      text-transform:uppercase;
+      margin:0 0 8px;
+    }
+
+    h1 {
+      font-family:Anton,Arial,sans-serif;
+      text-transform:uppercase;
+      font-size:54px;
+      line-height:1;
+      margin:0 0 14px;
+    }
+
+    .quote-hero p {
+      max-width:650px;
+      margin:0 auto;
+      color:#d5d5d5;
+      line-height:1.55;
+    }
+
+    .quote-wrap {
+      width:min(900px,92%);
+      margin:25px auto 70px;
+      border:1px solid #333;
+      border-radius:10px;
+      background:#0b0b0b;
+      padding:34px;
+    }
+
+    .quote-form {
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:20px;
+    }
+
+    .field {
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+
+    .full {
+      grid-column:1 / -1;
+    }
+
+    label {
+      font-weight:800;
+      font-size:13px;
+      text-transform:uppercase;
+    }
+
+    input,
+    select,
+    textarea {
+      width:100%;
+      border:1px solid #444;
+      background:#050505;
+      color:#fff;
+      border-radius:5px;
+      padding:15px;
+      font:inherit;
+      outline:none;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+      border-color:var(--red);
+    }
+
+    textarea {
+      min-height:150px;
+      resize:vertical;
+    }
+
+    .submit-btn {
+      grid-column:1 / -1;
+      border:0;
+      background:var(--red);
+      color:#fff;
+      padding:17px;
+      border-radius:5px;
+      font-size:16px;
+      font-weight:900;
+      text-transform:uppercase;
+      cursor:pointer;
+    }
+
+    .quote-note {
+      grid-column:1 / -1;
+      text-align:center;
+      color:#aaa;
+      font-size:12px;
+      margin:0;
+    }
+
+    .call-box {
+      text-align:center;
+      border-top:1px solid #222;
+      padding-top:25px;
+      margin-top:25px;
+    }
+
+    .call-box p {
+      color:#bbb;
+    }
+
+    .call-box a {
+      display:inline-block;
+      border:1px solid var(--red);
+      padding:14px 25px;
+      border-radius:5px;
+      font-weight:900;
+    }
+
+    @media(max-width:700px) {
+      .quote-header {
+        min-height:76px;
+      }
+
+      .quote-header img {
+        width:150px;
+        height:55px;
+      }
+
+      .back-home {
+        padding:11px 13px;
+        font-size:10px;
+      }
+
+      .quote-hero {
+        padding-top:40px;
+      }
+
+      h1 {
+        font-size:42px;
+      }
+
+      .quote-wrap {
+        padding:24px 18px;
+      }
+
+      .quote-form {
+        grid-template-columns:1fr;
+      }
+
+      .full,
+      .submit-btn,
+      .quote-note {
+        grid-column:auto;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="quote-header">
+    <a href="index.html">
+      <img src="asap-logo.png" alt="ASAP">
+    </a>
+
+    <a class="back-home" href="index.html">← Back to Home</a>
+  </header>
+
+  <section class="quote-hero">
+    <p class="eyebrow">Fast • Easy • No Obligation</p>
+    <h1>Request a Free Quote</h1>
+    <p>
+      Tell us what you need removed and we'll get back to you with a quote.
+      The more details you provide, the easier it is for us to estimate your job.
+    </p>
+  </section>
+
+  <main class="quote-wrap">
+
+    <form
+      class="quote-form"
+      action="https://formsubmit.co/Asapmike216@gmail.com"
+      method="POST"
+    >
+
+      <input type="hidden" name="_subject" value="New ASAP Quote Request">
+      <input type="hidden" name="_captcha" value="false">
+
+      <div class="field">
+        <label for="name">Full Name *</label>
+        <input id="name" name="Name" type="text" required>
+      </div>
+
+      <div class="field">
+        <label for="phone">Phone Number *</label>
+        <input id="phone" name="Phone" type="tel" required>
+      </div>
+
+      <div class="field">
+        <label for="email">Email</label>
+        <input id="email" name="Email" type="email">
+      </div>
+
+      <div class="field">
+        <label for="city">City / ZIP Code *</label>
+        <input id="city" name="City / ZIP" type="text" required>
+      </div>
+
+      <div class="field full">
+        <label for="service">What Do You Need Removed? *</label>
+
+        <select id="service" name="Service" required>
+          <option value="">Choose a service</option>
+          <option>Furniture Removal</option>
+          <option>Appliance Removal</option>
+          <option>Household Junk</option>
+          <option>Construction Debris</option>
+          <option>Yard Waste Removal</option>
+          <option>Clean Outs</option>
+          <option>Other</option>
+        </select>
+      </div>
+
+      <div class="field full">
+        <label for="details">Tell Us About the Job *</label>
+
+        <textarea
+          id="details"
+          name="Job Details"
+          placeholder="Example: couch, mattress, dresser and several bags in a second-floor apartment..."
+          required
+        ></textarea>
+      </div>
+
+      <div class="field">
+        <label for="date">Preferred Date</label>
+        <input id="date" name="Preferred Date" type="date">
+      </div>
+
+      <div class="field">
+        <label for="contact">Preferred Contact Method</label>
+
+        <select id="contact" name="Preferred Contact">
+          <option>Phone Call</option>
+          <option>Text Message</option>
+          <option>Email</option>
+        </select>
+      </div>
+
+      <button class="submit-btn" type="submit">
+        Get My Free Quote →
+      </button>
+
+      <p class="quote-note">
+        Submitting this form does not obligate you to book service.
+      </p>
+
+    </form>
+
+    <div class="call-box">
+      <p>Need help right away?</p>
+      <a href="tel:+12166164601">☎ Call (216) 616-4601</a>
+    </div>
+
+  </main>
+
+</body>
+</html>
