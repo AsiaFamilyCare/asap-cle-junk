@@ -1464,3 +1464,20 @@ footer p {
 .hero-points span.hero-point-icon {
   color: var(--red);
 }
+.why-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 18px;
+  color: var(--red);
+}
+
+.why-icon svg {
+  width: 42px;
+  height: 42px;
+  fill: none;
+  stroke: var(--red);
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
