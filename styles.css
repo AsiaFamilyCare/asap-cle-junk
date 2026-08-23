@@ -1481,3 +1481,14 @@ footer p {
   stroke-linecap: round;
   stroke-linejoin: round;
 }
+/* CLEAN SERVICE SVG ICONS */
+.service-icon svg {
+    width: 27px;
+    height: 27px;
+    fill: none;
+    stroke: #e2201a;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    display: block;
+}
