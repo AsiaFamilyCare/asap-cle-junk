@@ -1481,14 +1481,23 @@ footer p {
   stroke-linecap: round;
   stroke-linejoin: round;
 }
-/* CLEAN SERVICE SVG ICONS */
+/* CLEAN SERVICE SVG ICONS - SAFARI FIX */
 .service-icon svg {
-    width: 27px;
-    height: 27px;
-    fill: none;
-    stroke: #e2201a;
-    stroke-width: 1.8;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-    display: block;
+    width: 30px !important;
+    height: 30px !important;
+    display: block !important;
+    overflow: visible !important;
+}
+
+.service-icon svg path,
+.service-icon svg rect,
+.service-icon svg circle,
+.service-icon svg line,
+.service-icon svg polyline {
+    fill: none !important;
+    stroke: #e2201a !important;
+    stroke-width: 2 !important;
+    stroke-linecap: round !important;
+    stroke-linejoin: round !important;
+    vector-effect: non-scaling-stroke;
 }
