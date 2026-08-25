@@ -1501,3 +1501,17 @@ footer p {
     stroke-linejoin: round !important;
     vector-effect: non-scaling-stroke;
 }
+/* Fix quote form date field on mobile */
+.quote-form input[type="date"] {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .quote-form input[type="date"] {
+    width: 100%;
+    min-width: 0;
+  }
+}
