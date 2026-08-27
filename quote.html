@@ -6,274 +6,503 @@
 
   <title>Request a Free Quote | ASAP</title>
 
+  <meta
+    name="description"
+    content="Request a free junk removal and property cleanup quote from ASAP in Northeast Ohio."
+  >
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet"
+  >
 
   <style>
     :root {
-      --red:#e2201a;
-      --black:#050505;
-      --white:#f6f6f6;
+      --red: #e2201a;
+      --red-dark: #b81713;
+      --black: #050505;
+      --panel: #0b0b0b;
+      --panel-light: #111111;
+      --white: #f6f6f6;
+      --muted: #bdbdbd;
+      --line: #303030;
     }
 
     * {
-      box-sizing:border-box;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      background: var(--black);
     }
 
     body {
-      margin:0;
-      background:#050505;
-      color:#f6f6f6;
-      font-family:Inter,Arial,sans-serif;
+      margin: 0;
+      min-height: 100vh;
+      background:
+        radial-gradient(
+          circle at 50% 0%,
+          rgba(226, 32, 26, 0.08),
+          transparent 30%
+        ),
+        var(--black);
+      color: var(--white);
+      font-family: Inter, Arial, sans-serif;
     }
 
     a {
-      color:inherit;
-      text-decoration:none;
+      color: inherit;
+      text-decoration: none;
     }
 
+    button,
+    input,
+    select,
+    textarea {
+      font: inherit;
+    }
+
+    /* =========================
+       HEADER
+       ========================= */
+
     .quote-header {
-      min-height:86px;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:20px;
-      padding:10px 4%;
-      border-bottom:1px solid #222;
-      background:#050505;
+      min-height: 82px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 9px 4%;
+      border-bottom: 1px solid #222;
+      background: rgba(5, 5, 5, 0.98);
+    }
+
+    .logo-link {
+      display: flex;
+      align-items: center;
     }
 
     .quote-header img {
-      width:210px;
-      max-width:42vw;
-      height:65px;
-      object-fit:contain;
-      object-position:left center;
+      width: 195px;
+      max-width: 43vw;
+      height: 62px;
+      object-fit: contain;
+      object-position: left center;
+      display: block;
     }
 
     .back-home {
-      border:1px solid var(--red);
-      padding:13px 20px;
-      border-radius:5px;
-      text-transform:uppercase;
-      font-weight:900;
-      font-size:13px;
+      min-height: 44px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid var(--red);
+      border-radius: 6px;
+      padding: 11px 18px;
+      color: #fff;
+      font-size: 12px;
+      font-weight: 900;
+      text-transform: uppercase;
+      transition:
+        background 0.2s ease,
+        border-color 0.2s ease;
     }
 
+    .back-home:hover {
+      background: var(--red);
+    }
+
+    /* =========================
+       HERO
+       ========================= */
+
     .quote-hero {
-      text-align:center;
-      padding:55px 5% 25px;
+      text-align: center;
+      padding: 48px 5% 18px;
     }
 
     .eyebrow {
-      color:var(--red);
-      font-weight:900;
-      text-transform:uppercase;
-      margin:0 0 8px;
+      margin: 0 0 9px;
+      color: var(--red);
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: 0.6px;
+      text-transform: uppercase;
     }
 
-    h1 {
-      font-family:Anton,Arial,sans-serif;
-      text-transform:uppercase;
-      font-size:54px;
-      line-height:1;
-      margin:0 0 14px;
+    .quote-hero h1 {
+      margin: 0 0 14px;
+      font-family: Anton, Arial, sans-serif;
+      font-size: clamp(46px, 6vw, 64px);
+      font-weight: 400;
+      line-height: 0.98;
+      letter-spacing: 0.3px;
+      text-transform: uppercase;
     }
 
-    .quote-hero p {
-      max-width:650px;
-      margin:0 auto;
-      color:#d5d5d5;
-      line-height:1.55;
+    .quote-hero .intro {
+      max-width: 680px;
+      margin: 0 auto;
+      color: #d2d2d2;
+      font-size: 15px;
+      line-height: 1.6;
     }
+
+    /* =========================
+       FORM CARD
+       ========================= */
 
     .quote-wrap {
-      width:min(900px,92%);
-      margin:25px auto 70px;
-      border:1px solid #333;
-      border-radius:10px;
-      background:#0b0b0b;
-      padding:34px;
+      width: min(900px, 92%);
+      margin: 26px auto 65px;
+      padding: 32px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background:
+        linear-gradient(
+          180deg,
+          rgba(17, 17, 17, 0.96),
+          rgba(9, 9, 9, 0.98)
+        );
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.32);
+    }
+
+    .form-top {
+      margin-bottom: 26px;
+      padding-bottom: 22px;
+      border-bottom: 1px solid #252525;
+    }
+
+    .form-top h2 {
+      margin: 0 0 7px;
+      font-family: Anton, Arial, sans-serif;
+      font-size: 29px;
+      font-weight: 400;
+      letter-spacing: 0.3px;
+      text-transform: uppercase;
+    }
+
+    .form-top p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.5;
     }
 
     .quote-form {
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:20px;
+      width: 100%;
+      min-width: 0;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
     }
 
     .field {
-      display:flex;
-      flex-direction:column;
-      gap:8px;
+      min-width: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
     }
 
     .full {
-      grid-column:1 / -1;
+      grid-column: 1 / -1;
     }
 
     label {
-      font-weight:800;
-      font-size:13px;
-      text-transform:uppercase;
+      color: #fff;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.35px;
+      text-transform: uppercase;
+    }
+
+    .required {
+      color: var(--red);
     }
 
     input,
     select,
     textarea {
-      width:100%;
-      border:1px solid #444;
-      background:#050505;
-      color:#fff;
-      border-radius:5px;
-      padding:15px;
-      font:inherit;
-      outline:none;
+      width: 100%;
+      max-width: 100%;
+      min-width: 0;
+      border: 1px solid #424242;
+      border-radius: 6px;
+      background: #050505;
+      color: #fff;
+      padding: 14px 15px;
+      outline: none;
+      transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+    }
+
+    input,
+    select {
+      min-height: 50px;
+    }
+
+    textarea {
+      min-height: 145px;
+      resize: vertical;
+      line-height: 1.45;
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+      color: #888;
     }
 
     input:focus,
     select:focus,
     textarea:focus {
-      border-color:var(--red);
+      border-color: var(--red);
+      box-shadow: 0 0 0 3px rgba(226, 32, 26, 0.1);
     }
 
-    textarea {
-      min-height:150px;
-      resize:vertical;
+    input[type="date"] {
+      width: 100%;
+      max-width: 100%;
+      min-width: 0;
+      display: block;
+      box-sizing: border-box;
     }
 
     .submit-btn {
-      grid-column:1 / -1;
-      border:0;
-      background:var(--red);
-      color:#fff;
-      padding:17px;
-      border-radius:5px;
-      font-size:16px;
-      font-weight:900;
-      text-transform:uppercase;
-      cursor:pointer;
+      grid-column: 1 / -1;
+      width: 100%;
+      min-height: 54px;
+      border: 0;
+      border-radius: 6px;
+      background: var(--red);
+      color: #fff;
+      padding: 16px 18px;
+      cursor: pointer;
+      font-size: 15px;
+      font-weight: 900;
+      letter-spacing: 0.25px;
+      text-transform: uppercase;
+      transition:
+        background 0.2s ease,
+        transform 0.15s ease;
+    }
+
+    .submit-btn:hover {
+      background: var(--red-dark);
+    }
+
+    .submit-btn:active {
+      transform: translateY(1px);
     }
 
     .quote-note {
-      grid-column:1 / -1;
-      text-align:center;
-      color:#aaa;
-      font-size:12px;
-      margin:0;
+      grid-column: 1 / -1;
+      margin: -3px 0 0;
+      color: #969696;
+      font-size: 12px;
+      line-height: 1.45;
+      text-align: center;
     }
 
+    /* =========================
+       CALL SECTION
+       ========================= */
+
     .call-box {
-      text-align:center;
-      border-top:1px solid #222;
-      padding-top:25px;
-      margin-top:25px;
+      margin-top: 27px;
+      padding-top: 25px;
+      border-top: 1px solid #252525;
+      text-align: center;
+    }
+
+    .call-box strong {
+      display: block;
+      margin-bottom: 5px;
+      font-size: 16px;
+      text-transform: uppercase;
     }
 
     .call-box p {
-      color:#bbb;
+      margin: 0 0 15px;
+      color: var(--muted);
+      font-size: 13px;
     }
 
-    .call-box a {
-      display:inline-block;
-      border:1px solid var(--red);
-      padding:14px 25px;
-      border-radius:5px;
-      font-weight:900;
+    .call-button {
+      min-height: 48px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid var(--red);
+      border-radius: 6px;
+      padding: 13px 24px;
+      font-weight: 900;
+      transition: background 0.2s ease;
     }
 
-    @media(max-width:700px) {
+    .call-button:hover {
+      background: var(--red);
+    }
+
+    /* =========================
+       SERVICE AREA
+       ========================= */
+
+    .service-note {
+      width: min(900px, 92%);
+      margin: -38px auto 55px;
+      color: #929292;
+      font-size: 12px;
+      line-height: 1.55;
+      text-align: center;
+    }
+
+    /* =========================
+       MOBILE
+       ========================= */
+
+    @media (max-width: 700px) {
       .quote-header {
-        min-height:76px;
+        min-height: 72px;
+        padding: 8px 4%;
       }
 
       .quote-header img {
-        width:150px;
-        height:55px;
+        width: 145px;
+        height: 52px;
       }
 
       .back-home {
-        padding:11px 13px;
-        font-size:10px;
+        min-height: 40px;
+        padding: 9px 12px;
+        font-size: 9px;
       }
 
       .quote-hero {
-        padding-top:40px;
+        padding: 34px 6% 14px;
       }
 
-      h1 {
-        font-size:42px;
+      .eyebrow {
+        margin-bottom: 8px;
+        font-size: 11px;
+      }
+
+      .quote-hero h1 {
+        font-size: 40px;
+        line-height: 1;
+      }
+
+      .quote-hero .intro {
+        font-size: 14px;
+        line-height: 1.5;
       }
 
       .quote-wrap {
-        padding:24px 18px;
+        width: 92%;
+        margin: 18px auto 48px;
+        padding: 21px 16px;
+        border-radius: 10px;
+      }
+
+      .form-top {
+        margin-bottom: 22px;
+        padding-bottom: 18px;
+      }
+
+      .form-top h2 {
+        font-size: 25px;
+      }
+
+      .form-top p {
+        font-size: 12px;
       }
 
       .quote-form {
-        grid-template-columns:1fr;
+        grid-template-columns: 1fr;
+        gap: 16px;
       }
 
       .full,
       .submit-btn,
       .quote-note {
-        grid-column:auto;
+        grid-column: auto;
+      }
+
+      label {
+        font-size: 11px;
+      }
+
+      input,
+      select,
+      textarea {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+        padding: 13px 14px;
+        font-size: 16px;
+      }
+
+      input,
+      select {
+        min-height: 48px;
+      }
+
+      textarea {
+        min-height: 130px;
+      }
+
+      input[type="date"] {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+        display: block !important;
+        box-sizing: border-box !important;
+      }
+
+      .submit-btn {
+        min-height: 52px;
+        font-size: 14px;
+      }
+
+      .call-box {
+        margin-top: 24px;
+        padding-top: 22px;
+      }
+
+      .call-button {
+        width: 100%;
+      }
+
+      .service-note {
+        width: 88%;
+        margin: -28px auto 42px;
       }
     }
-    /* FIX QUOTE FORM WIDTHS ON MOBILE */
-input[type="date"] {
-  width: 100% !important;
-  max-width: 100% !important;
-  min-width: 0 !important;
-  display: block !important;
-  box-sizing: border-box !important;
-  -webkit-appearance: none;
-  appearance: none;
-}
-
-.field {
-  min-width: 0 !important;
-}
-
-.quote-form {
-  width: 100% !important;
-  min-width: 0 !important;
-}
-
-@media (max-width: 700px) {
-  .quote-form {
-    grid-template-columns: 1fr !important;
-  }
-
-  .field,
-  .full,
-  .submit-btn,
-  .quote-note,
-  input,
-  select,
-  textarea {
-    width: 100% !important;
-    max-width: 100% !important;
-    min-width: 0 !important;
-  }
-}
   </style>
 </head>
 
 <body>
 
   <header class="quote-header">
-    <a href="index.html">
-      <img src="asap-logo.png" alt="ASAP">
+    <a class="logo-link" href="index.html">
+      <img src="asap-logo.png" alt="ASAP Trash Removal & Property Maintenance">
     </a>
 
-    <a class="back-home" href="index.html">← Back to Home</a>
+    <a class="back-home" href="index.html">
+      ← Back to Home
+    </a>
   </header>
 
   <section class="quote-hero">
     <p class="eyebrow">Fast • Easy • No Obligation</p>
+
     <h1>Request a Free Quote</h1>
-    <p>
+
+    <p class="intro">
       Tell us what you need removed and we'll get back to you with a quote.
       The more details you provide, the easier it is for us to estimate your job.
     </p>
@@ -281,39 +510,100 @@ input[type="date"] {
 
   <main class="quote-wrap">
 
+    <div class="form-top">
+      <h2>Tell Us About Your Job</h2>
+
+      <p>
+        Fill out the form below and ASAP will follow up with you about your
+        removal or cleanout needs.
+      </p>
+    </div>
+
     <form
       class="quote-form"
       action="https://formsubmit.co/Asapmike216@gmail.com"
       method="POST"
     >
 
-      <input type="hidden" name="_subject" value="New ASAP Quote Request">
-      <input type="hidden" name="_captcha" value="false">
+      <input
+        type="hidden"
+        name="_subject"
+        value="New ASAP Quote Request"
+      >
+
+      <input
+        type="hidden"
+        name="_captcha"
+        value="false"
+      >
 
       <div class="field">
-        <label for="name">Full Name *</label>
-        <input id="name" name="Name" type="text" required>
+        <label for="name">
+          Full Name <span class="required">*</span>
+        </label>
+
+        <input
+          id="name"
+          name="Name"
+          type="text"
+          autocomplete="name"
+          placeholder="Your name"
+          required
+        >
       </div>
 
       <div class="field">
-        <label for="phone">Phone Number *</label>
-        <input id="phone" name="Phone" type="tel" required>
+        <label for="phone">
+          Phone Number <span class="required">*</span>
+        </label>
+
+        <input
+          id="phone"
+          name="Phone"
+          type="tel"
+          autocomplete="tel"
+          placeholder="(216) 555-1234"
+          required
+        >
       </div>
 
       <div class="field">
         <label for="email">Email</label>
-        <input id="email" name="Email" type="email">
+
+        <input
+          id="email"
+          name="Email"
+          type="email"
+          autocomplete="email"
+          placeholder="you@example.com"
+        >
       </div>
 
       <div class="field">
-        <label for="city">City / ZIP Code *</label>
-        <input id="city" name="City / ZIP" type="text" required>
+        <label for="city">
+          City / ZIP Code <span class="required">*</span>
+        </label>
+
+        <input
+          id="city"
+          name="City / ZIP"
+          type="text"
+          autocomplete="postal-code"
+          placeholder="City or ZIP code"
+          required
+        >
       </div>
 
       <div class="field full">
-        <label for="service">What Do You Need Removed? *</label>
+        <label for="service">
+          What Do You Need Removed? <span class="required">*</span>
+        </label>
 
-        <select id="service" name="Service" required>
+        <select
+          id="service"
+          name="Service"
+          required
+        >
           <option value="">Choose a service</option>
           <option>Furniture Removal</option>
           <option>Appliance Removal</option>
@@ -326,7 +616,9 @@ input[type="date"] {
       </div>
 
       <div class="field full">
-        <label for="details">Tell Us About the Job *</label>
+        <label for="details">
+          Tell Us About the Job <span class="required">*</span>
+        </label>
 
         <textarea
           id="details"
@@ -338,20 +630,31 @@ input[type="date"] {
 
       <div class="field">
         <label for="date">Preferred Date</label>
-        <input id="date" name="Preferred Date" type="date">
+
+        <input
+          id="date"
+          name="Preferred Date"
+          type="date"
+        >
       </div>
 
       <div class="field">
         <label for="contact">Preferred Contact Method</label>
 
-        <select id="contact" name="Preferred Contact">
+        <select
+          id="contact"
+          name="Preferred Contact"
+        >
           <option>Phone Call</option>
           <option>Text Message</option>
           <option>Email</option>
         </select>
       </div>
 
-      <button class="submit-btn" type="submit">
+      <button
+        class="submit-btn"
+        type="submit"
+      >
         Get My Free Quote →
       </button>
 
@@ -362,11 +665,25 @@ input[type="date"] {
     </form>
 
     <div class="call-box">
-      <p>Need help right away?</p>
-      <a href="tel:+12166164601">☎ Call (216) 616-4601</a>
+      <strong>Need Help Right Away?</strong>
+
+      <p>
+        Give ASAP a call and speak with us directly.
+      </p>
+
+      <a
+        class="call-button"
+        href="tel:+12166164601"
+      >
+        ☎ Call (216) 616-4601
+      </a>
     </div>
 
   </main>
+
+  <p class="service-note">
+    Serving Cuyahoga, Ashtabula, Geauga, Lake, Lorain and Medina counties.
+  </p>
 
 </body>
 </html>
